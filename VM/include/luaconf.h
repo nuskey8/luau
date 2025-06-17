@@ -45,6 +45,11 @@
 #define LUA_NORETURN __attribute__((__noreturn__))
 #endif
 
+#ifdef LUAU_BUILD_AS_EXTERN_C
+#define LUA_API extern "C"
+#define LUALIB_API extern "C"
+#endif
+
 // Can be used to reconfigure visibility/exports for public APIs
 #ifndef LUA_API
 #define LUA_API extern

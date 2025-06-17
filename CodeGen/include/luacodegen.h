@@ -1,6 +1,10 @@
 // This file is part of the Luau programming language and is licensed under MIT License; see LICENSE.txt for details
 #pragma once
 
+#ifdef LUAU_BUILD_AS_EXTERN_C
+#define LUACODEGEN_API extern "C"
+#endif
+
 // Can be used to reconfigure visibility/exports for public APIs
 #ifndef LUACODEGEN_API
 #define LUACODEGEN_API extern

@@ -3,6 +3,10 @@
 
 #include <stddef.h>
 
+#ifdef LUAU_BUILD_AS_EXTERN_C
+#define LUACODE_API extern "C"
+#endif
+
 // can be used to reconfigure visibility/exports for public APIs
 #ifndef LUACODE_API
 #define LUACODE_API extern
