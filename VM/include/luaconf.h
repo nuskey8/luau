@@ -55,7 +55,9 @@
 #define LUA_API extern
 #endif
 
+#ifndef LUALIB_API
 #define LUALIB_API LUA_API
+#endif
 
 // Can be used to reconfigure visibility for internal APIs
 #if defined(__GNUC__)
